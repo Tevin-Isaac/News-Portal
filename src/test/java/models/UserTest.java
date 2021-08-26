@@ -7,19 +7,19 @@ import static org.junit.Assert.assertEquals;
 public class UserTest {
     @Test
     public void userInstantiatesCorrectly() {
-        User user = new User ("Gideon",1, "Maintains System");
+        User user = new User ("Gideon",1, "Maintains Banks System");
         assertEquals(true, user instanceof User);
     }
 
     @Test
     public void getUsernameCorrectly() {
-        User user = new User ("Gideon",1, "Maintains System");
+        User user = new User ("Gideon",1, "Maintains  Banks System");
         assertEquals("Gideon", user.getUsername());
     }
 
     @Test
     public void getDepartmentIdCorrectly() {
-        User user = new User ("Gideon",1, "Maintains System");
+        User user = new User ("Gideon",1, "Maintains Banks System");
         assertEquals(1, user.getDepartmentId());
     }
 

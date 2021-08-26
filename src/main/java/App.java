@@ -21,7 +21,7 @@ public class App {
         Gson gson = new Gson();
 
         String connectionString = "jdbc:h2:~/Organisational-News-Portal.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
 
         departmentDao= new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);

@@ -73,19 +73,19 @@ public class Sql2oUserDaoTest {
    }
 
    //helpers
-   public User setupUser() {
+   private User setupUser() {
       User user = new User("Gideon", 1, "Maintains System");
       userDao.add(user);
       return user;
    }
 
-   public User setupUserForDepartment(Department otherDepartment) {
+   private User setupUserForDepartment(Department otherDepartment) {
       User user = new User("Gideon", 1, "Maintains system");
       userDao.add(user);
       return user;
    }
 
-   public Department setupDepartment() {
+   private Department setupDepartment() {
       Department department = new Department("Finance", "Maintains Financial Records", 13);
       departmentDao.add(department);
       return department;

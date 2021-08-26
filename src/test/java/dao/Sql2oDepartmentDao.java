@@ -89,7 +89,7 @@ class Sql2oDepartmentDaoTest {
         News testNews = new News("BMW", "Electric car launch date revealed", 3);
         newsDao.add(testNews);
 
-        News otherNews = new News("Agriculture", "New plant vaccine discovered", 5);
+        News otherNews = new News("Health", "New covid vaccine discovered", 5);
         newsDao.add(otherNews);
 
         Department testDepartment = setupDepartment();
