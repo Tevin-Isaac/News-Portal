@@ -1,5 +1,4 @@
 import com.google.gson.Gson;
-import dao.DB;
 import dao.Sql2oDepartmentDao;
 import dao.Sql2oNewsDao;
 import dao.Sql2oUserDao;

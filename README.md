@@ -28,7 +28,5 @@ Tevin Isaac
 ## CONTACT INFORMATION
 Email: isaactevin@yahoo.com
 
-## LICENSE
-* MIT License
 
-* Copyright (c) 2020 Tevin Isaac
+## Copyright (c) 2021 Tevin Isaac
