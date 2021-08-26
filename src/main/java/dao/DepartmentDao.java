@@ -25,5 +25,5 @@ public interface DepartmentDao {
 
 
     //update
-//    void update(int id, String name, String description, int totalemployees);
+//    void update(int id, String name, String description, int totalemployees)
 }
