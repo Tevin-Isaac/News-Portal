@@ -28,10 +28,10 @@ public class App {
         Connection conn;
         Gson gson = new Gson();
 
-//         String connectionString = "jdbc:h2:~/tevin.db;INIT=RUNSCRIPT from 'classpath:dao/create.sql'";
-//        Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
-        String connectionString = "jdbc:postgresql://ec2-18-214-238-28.compute-1.amazonaws.com:5432/d9ffe8pvlkorio"; //!
-        Sql2o sql2o = new Sql2o(connectionString, "xwayyrtgsuiqfd", "da122c88c2120d7e0a9715bc103cc0a9d4e70295d156544e72a0b882db3e6fcd"); //!
+       String connectionString = "jdbc:h2:~/tevin.db;INIT=RUNSCRIPT from 'classpath:dao/create.sql'";
+       Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
+//        String connectionString = "jdbc:postgresql://ec2-18-214-238-28.compute-1.amazonaws.com:5432/d9ffe8pvlkorio"; //!
+//        Sql2o sql2o = new Sql2o(connectionString, "xwayyrtgsuiqfd", "da122c88c2120d7e0a9715bc103cc0a9d4e70295d156544e72a0b882db3e6fcd"); //!
 
         departmentDao= new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
