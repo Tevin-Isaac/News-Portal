@@ -21,7 +21,7 @@ public class Sql2oNewsDaoTest {
     @Before
     public void setUp() throws Exception {
         String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
         departmentDao = new Sql2oDepartmentDao(sql2o);
         newsDao = new Sql2oNewsDao(sql2o);
         conn = sql2o.open();

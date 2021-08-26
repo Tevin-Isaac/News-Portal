@@ -13,7 +13,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class Sql2oDepartmentDaoTest {
+class Sql2oDepartmentDaoTest {
     private Connection conn;
     private Sql2oDepartmentDao departmentDao;
     private Sql2oNewsDao newsDao;
@@ -22,7 +22,7 @@ public class Sql2oDepartmentDaoTest {
     @Before
     public void setUp() throws Exception {
         String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
-        Sql2o sql2o = new Sql2o(connectionString, "", "");
+        Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
         departmentDao = new Sql2oDepartmentDao(sql2o);
         newsDao= new Sql2oNewsDao(sql2o);
         userDao = new Sql2oUserDao(sql2o);

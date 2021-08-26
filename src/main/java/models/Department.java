@@ -3,9 +3,9 @@ package models;
 import java.util.Objects;
 
 public class Department {
-    public String name;
-    public String description;
-    public int totalemployees;
+    private String name;
+    private String description;
+    private int totalemployees;
     private int id;
 
     public Department(String name, String description, int totalemployees) {
