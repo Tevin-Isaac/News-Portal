@@ -20,9 +20,9 @@ public class Sql2oUserDaoTest {
    public void setUp() throws Exception {
       String connectionString = "jdbc:h2:~/tevin.db;INIT=RUNSCRIPT from 'classpath:dao/create.sql'";
       Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
-      userDao = new Sql2oUserDao(DB.sql2o);
-      departmentDao = new Sql2oDepartmentDao(DB.sql2o);
-      newsDao = new Sql2oNewsDao(DB.sql2o);
+      userDao = new Sql2oUserDao(sql2o);
+      departmentDao = new Sql2oDepartmentDao(sql2o);
+      newsDao = new Sql2oNewsDao(sql2o);
       conn = DB.sql2o.open();
    }
 
