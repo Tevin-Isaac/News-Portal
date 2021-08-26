@@ -13,7 +13,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-public class Sql2oDepartmentDaoTest {
+class Sql2oDepartmentDaoTest {
     private Connection conn;
     private Sql2oDepartmentDao departmentDao;
     private Sql2oNewsDao newsDao;
