@@ -13,7 +13,7 @@ import java.util.List;
 public class Sql2oDepartmentDao implements DepartmentDao {
     private final Sql2o sql2o;
     public Sql2oDepartmentDao(Sql2o sql2o) {
-        this.sql2o = sql2o;
+        this.sql2o =sql2o;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Sql2oDepartmentDao implements DepartmentDao {
     @Override
     public void addDepartmentToNews(Department department, News news) {
         String sql ="INSERT INTO departments_news (newsid, departmentid) VALUES (:newsId, :departmentId)";
-        try (Connection con = sql2o.open()) {
+        try (Connection con =sql2o.open()) {
             con.createQuery(sql)
                     .addParameter("newsId", news.getId())
                     .addParameter("departmentId", department.getId())
@@ -113,7 +113,7 @@ public class Sql2oDepartmentDao implements DepartmentDao {
     @Override
     public void clearAll() {
         String sql = "DELETE from department";
-        try (Connection con = sql2o.open()) {
+        try (Connection con =sql2o.open()) {
             con.createQuery(sql).executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);

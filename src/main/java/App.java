@@ -1,7 +1,8 @@
 import com.google.gson.Gson;
-import dao.Sql2oUserDao;
+import dao.DB;
 import dao.Sql2oDepartmentDao;
 import dao.Sql2oNewsDao;
+import dao.Sql2oUserDao;
 import models.Department;
 import models.News;
 import models.User;
@@ -20,7 +21,7 @@ public class App {
         Connection conn;
         Gson gson = new Gson();
 
-        String connectionString = "jdbc:h2:~/Organisational-News-Portal.db;INIT=RUNSCRIPT from 'classpath:db/create.sql'";
+        String connectionString = "jdbc:h2:~/tevin.db;INIT=RUNSCRIPT from 'classpath:dao/create.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "tevin", "index");
 
         departmentDao= new Sql2oDepartmentDao(sql2o);

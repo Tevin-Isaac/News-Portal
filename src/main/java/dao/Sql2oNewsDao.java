@@ -7,7 +7,6 @@ import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class Sql2oNewsDao implements NewsDao {
@@ -48,7 +47,7 @@ public class Sql2oNewsDao implements NewsDao {
 
     @Override
     public List<News> getAll() {
-        try (Connection con = sql2o.open()) {
+        try (Connection con =sql2o.open()) {
             return con.createQuery("SELECT * FROM news")
                     .executeAndFetch(News.class);
         }
@@ -101,7 +100,7 @@ public class Sql2oNewsDao implements NewsDao {
     @Override
     public void clearAll() {
         String sql = "DELETE from news";
-        try (Connection con = sql2o.open()) {
+        try (Connection con =sql2o.open()) {
             con.createQuery(sql).executeUpdate();
         } catch (Sql2oException ex) {
             System.out.println(ex);
